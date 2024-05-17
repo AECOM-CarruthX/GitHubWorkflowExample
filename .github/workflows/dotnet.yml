@@ -6,6 +6,7 @@ name: dev-pull-req
 on:
   pull_request:
     branches: [ "development" ]
+  workflow_dispatch:
 
 jobs:
   build:
