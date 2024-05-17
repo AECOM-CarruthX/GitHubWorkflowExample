@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="MVVMDemoNew.Cart.CartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMDemoNew.Cart"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate x:Key="CartTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" >
+                    <Image MaxWidth="100" MaxHeight="100" Source="{Binding ImageUrl}" />
+                    <TextBlock Text="{Binding Name}" Padding="0,0,20,0" />
+                    <TextBlock Text="{Binding Description}" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <TextBlock Text="Qty" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                    <TextBlock Text="{Binding Quantity}" HorizontalAlignment="Right"/>
+                    <Button Content="Delete" 
+                        HorizontalAlignment="Right"
+                        Margin="20,0,0,0"
+                        Command="{Binding DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        CommandParameter="{Binding}"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+    </UserControl.Resources>
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Cart" Margin="5" FontSize="22" />
+        <Button Content="Go Back To Catalog"
+    Grid.Column="1"
+    HorizontalAlignment="Right"
+    VerticalAlignment="Top"
+    Margin="5" 
+    Height="40"
+    Command="{Binding ReturnToCatalogCommand}"/>
+        <ListBox ItemsSource="{Binding CartItems}" ItemTemplate="{StaticResource CartTemplate}" Grid.Row="1" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch"/>
+    </Grid>
+</UserControl>
