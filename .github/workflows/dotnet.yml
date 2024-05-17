@@ -22,7 +22,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./MVVMDemoNew.sln
     - name: Build
-      run: dotnet build ./MVVMDemoNew.sln --no-restore
+      run: dotnet build ./MVVMDemoNew.sln --no-restore /p:EnableWindowsTargeting=true
     - name: Test
       run: dotnet test ./MVVMDemoNew.Tests/MVVMDemoNew.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=extests.trx"
     - name: Publish Test Results
