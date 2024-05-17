@@ -30,4 +30,4 @@ jobs:
       if: always()
       with:
         files: |
-          */MVVMDemo.Tests/TestResults/extests.trx
+          */MVVMDemoNew.Tests/TestResults/extests.trx
