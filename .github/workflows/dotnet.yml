@@ -9,10 +9,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-
+  lint:
     runs-on: windows-latest
-
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./MVVMDemoNew.sln
+    - name: Check format and lint
+      run: dotnet format --verify-no-changes --verbosity diagnostic
+  test:
+    runs-on: windows-latest
+    needs: lint
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
