@@ -53,6 +53,20 @@ jobs:
         tag: "${{ github.run_number }}_${{ github.run_id }}" 
         customSettings: "" 
         toolpath: "reportgeneratortool"
+    - name: Upload code coverage file
+      uses: actions/upload-artifact@v4
+      with:
+        name: Coverage
+        path: ${{ github.workspace }}/**/Cobertura.xml
+        retention-days: 3
+  coverage:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+    - name: Download Coverage Files
+      uses: actions/download-artifac@v4
+      with:
+        name: Coverage
     - name: Publish Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
