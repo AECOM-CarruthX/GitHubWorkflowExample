@@ -18,11 +18,11 @@
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal" >
                     <Image MaxWidth="100" MaxHeight="100" Source="{Binding ImageUrl}" />
-                    <TextBlock Text="{Binding Name}" Padding="0,0,20,0" />
+                    <TextBlock Text="{Binding Name}" Padding="0,0,10,0" />
                     <TextBlock Text="{Binding Description}" />
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" >
-                    <TextBlock Text="Qty" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                    <TextBlock Text="Qty" HorizontalAlignment="Right" Margin="0,0,20,0"/>
                     <TextBlock Text="{Binding Quantity}" HorizontalAlignment="Right"/>
                     <Button Content="Delete" 
                         HorizontalAlignment="Right"
