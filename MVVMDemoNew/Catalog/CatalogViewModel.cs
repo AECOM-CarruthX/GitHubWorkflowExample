@@ -52,7 +52,6 @@ namespace MVVMDemoNew.Catalog
             if (GoToCartRequested != null)
             {
                 GoToCartRequested.Invoke();
-                Trace.WriteLine("Invoking");
             }
             else
             {
