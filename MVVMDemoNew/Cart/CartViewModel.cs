@@ -38,7 +38,7 @@ namespace MVVMDemoNew.Cart
         {
             CartItems = new ObservableCollection<ShoppingItem>()
             {
-                new ShoppingItem(new Guid(), "Navy Leggings", "Navy is a amazing color for pants.", "pack://application:,,,/MVVMDemoNew;component/Images/navy pants.jpg", 1),
+                new ShoppingItem(new Guid(), "Navy Leggings", "Navy is a terrible color for pants.", "pack://application:,,,/MVVMDemoNew;component/Images/navy pants.jpg", 1),
             };
             EditItemCommand = new RelayCommand<ShoppingItem>(OnEditItem);
             DeleteItemCommand = new RelayCommand<ShoppingItem>(OnDeleteItem);
