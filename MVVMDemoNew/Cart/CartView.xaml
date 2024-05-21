@@ -44,7 +44,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Cart" Margin="5" FontSize="22" />
-        <Button Content="Catalog"
+        <Button Content="Shopping Catalog"
     Grid.Column="1"
     HorizontalAlignment="Right"
     VerticalAlignment="Top"
