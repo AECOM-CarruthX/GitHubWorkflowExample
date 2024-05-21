@@ -49,7 +49,7 @@ namespace MVVMDemoNew.Cart
         {
             if (cartItems == null)
             {
-                Trace.WriteLine("Cart Items is null");
+                Trace.WriteLine("Cart Items");
             }
             CartItems.Add(shoppingItem);
             Trace.WriteLine(cartItems);
