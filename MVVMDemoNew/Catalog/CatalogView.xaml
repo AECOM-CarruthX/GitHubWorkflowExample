@@ -25,7 +25,7 @@
                     <TextBlock Text="{Binding Description}" />
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" >
-                    <TextBlock Text="Qty" HorizontalAlignment="Right" Margin="5,0,5,0"/>
+                    <TextBlock Text="Qty" HorizontalAlignment="Right" Margin="5,0,10,0"/>
                     <TextBox Text="{Binding Quantity, ValidatesOnNotifyDataErrors=True}" HorizontalAlignment="Right"/>
                     <Button Content="Add To Cart" 
                             HorizontalAlignment="Right"
