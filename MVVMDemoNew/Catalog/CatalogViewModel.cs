@@ -55,7 +55,7 @@ namespace MVVMDemoNew.Catalog
             }
             else
             {
-                Trace.WriteLine("Failed to invoke");
+                Trace.WriteLine("Failed");
             }
         }
 
