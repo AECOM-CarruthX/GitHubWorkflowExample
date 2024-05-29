@@ -21,7 +21,7 @@ namespace MVVMDemoNew.Models
         //}
 
         private int _quantity;
-        [Range(1, 5, ErrorMessage = "The value for {0} must be between {1} and {2}")]
+        [Range(1, 5, ErrorMessage = "The value for {0} must be between")]
         public int Quantity
         {
             get => _quantity;
