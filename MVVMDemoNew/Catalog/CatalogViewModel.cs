@@ -47,18 +47,6 @@ namespace MVVMDemoNew.Catalog
             set => shoppingItems = value;
         }
 
-        private void OnGoToCart()
-        {
-            if (GoToCartRequested != null)
-            {
-                GoToCartRequested.Invoke();
-            }
-            else
-            {
-                Trace.WriteLine("Failed to invoke");
-            }
-        }
-
         private void OnAddToCart(ShoppingItem shoppingItem)
         {
             AddToCartRequested(shoppingItem);
