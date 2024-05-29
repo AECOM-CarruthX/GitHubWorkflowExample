@@ -53,10 +53,6 @@ namespace MVVMDemoNew.Catalog
             {
                 GoToCartRequested.Invoke();
             }
-            else
-            {
-                Trace.WriteLine("Failed to invoke");
-            }
         }
 
         private void OnAddToCart(ShoppingItem shoppingItem)
