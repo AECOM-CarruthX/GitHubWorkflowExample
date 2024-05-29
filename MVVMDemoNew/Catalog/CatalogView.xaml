@@ -47,8 +47,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Shopping Cat" Margin="5" FontSize="22" />
-        <Button Content="Go To Cart"
+        <TextBlock Text="Shopping" Margin="5" FontSize="22" />
+        <Button Content="To Cart"
         Grid.Column="1"
         HorizontalAlignment="Right"
         VerticalAlignment="Top"
