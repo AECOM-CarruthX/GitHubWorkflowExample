@@ -50,7 +50,6 @@ namespace MVVMDemoNew.Catalog
         private void OnAddToCart(ShoppingItem shoppingItem)
         {
             AddToCartRequested(shoppingItem);
-            Trace.WriteLine(shoppingItem.HasErrors);
         }
 
         bool CanAddToCart(ShoppingItem shoppingItem) => true;
