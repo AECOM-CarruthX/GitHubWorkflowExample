@@ -3,7 +3,6 @@ using MVVMDemoNew.Models;
 using MVVMDemoNew.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 
 namespace MVVMDemoNew.Catalog
 {
@@ -36,7 +35,6 @@ namespace MVVMDemoNew.Catalog
             _repository = shoppingItemsRepository;
 
             AddToCartCommand = new RelayCommand<ShoppingItem>(OnAddToCart, CanAddToCart);
-            GoToCartCommand = new RelayCommand(OnGoToCart);
 
             ShoppingItems = new ObservableCollection<ShoppingItem>(_repository.GetShoppingItems());
         }
